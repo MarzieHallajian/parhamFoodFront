@@ -65,7 +65,8 @@ export class PostCreateComponent{
             .subscribe(
               res => {
                 // successful login
-                console.log(res);
+                this.httpApiService.customer = res;
+                console.log(this.httpApiService.customer);
               },
               error => {
                 // error on server
@@ -76,7 +77,7 @@ export class PostCreateComponent{
     onRegister(){
         console.log(this.phoneNumber);
         console.log(this.passWord);
-
+        console.log(this.httpApiService.customer);
         //check mishe password
         // if (this.passWord.length < 8) {
             
