@@ -1,0 +1,65 @@
+mat-card{
+    width: 100%;
+
+    background-color: white;
+}
+
+mat-form-field, textarea {
+    position:static;
+    
+    width: 100%;
+}
+
+
+button{
+    margin-top: 3px;
+    margin-right: 10px;
+}
+.modal{
+    margin-top: 20ex;
+    
+}
+ /* div:first-child{
+    height: 23px;
+    margin-top: -20px;
+}  */
+#logRegButoon{
+
+    text-align: left;
+    height: 39px;
+    padding-top: 0px;
+    margin-top: -20px;
+   
+
+}
+/* 
+.divAlert{
+    width: 80%;
+    margin: auto;
+    height: 30px;
+} */
+.errorMassage{
+    color:navy;
+    
+    margin: auto;
+    text-align: left;
+}
+.close{
+    color: black;
+
+    position:relative;
+    top: -40px;
+}
+.modal-content{
+    background-color: lightsteelblue;
+}
+
+mat-card:first-child{
+    position: sticky;
+    top: 100px;
+}
+mat-card:nth-child(2){
+    position: absolute;
+    top: 100px;
+}
+

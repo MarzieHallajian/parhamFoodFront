@@ -1,0 +1,151 @@
+<!-- <mat-card>
+    <mat-form-field class="example-full-width">
+        <mat-label>phone number</mat-label>
+        <input matInput rows="1"  [(ngModel)] = "phoneNumber" >
+
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>password</mat-label>
+        <input matInput rows="1" [(ngModel)] = "passWord" (keyup)="onPress()">
+    </mat-form-field>
+    <button mat-raised-button color="warn" (click)="onLogin()" >login</button>
+    <button mat-raised-button color="warn" (click)="onRegister()">register</button>
+</mat-card>
+
+<p *ngIf = "!loginCheckPass" class="errorMassage">!your password should be at least 8charectors and contains both number and charectors</p>
+<p *ngIf = "!loginAuthentication" class="errorMassage">!wrong password or phone number</p>
+
+<mat-card>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>name</mat-label>
+        <input matInput rows="1"  [(ngModel)] = "name" >
+
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>area</mat-label>
+        <input matInput  [(ngModel)] = "area">
+       
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>address</mat-label>
+        <textarea matInput  rows="4" [(ngModel)] = "address">
+        </textarea>
+
+    </mat-form-field>
+
+
+    <button mat-raised-button color="warn" (click)="onRegister()">complete register</button>
+
+
+    
+
+</mat-card> -->
+
+
+<div id="logRegButoon" class = "bg-primary">
+    <button type="button" class="btn btn-primary regLogButton" data-toggle="modal" data-target="#exampleModal">
+        Register/Login
+    </button>
+</div>
+
+  
+  <!-- Modal -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">register or login</h1>
+          <button type="button" class="close closeButton" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <mat-card>
+                <mat-form-field class="example-full-width">
+                    <mat-label>phone number</mat-label>
+                    <input matInput rows="1"  [(ngModel)] = "phoneNumber" (keyup)="onPress()">
+            
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>password</mat-label>
+                    <input matInput rows="1" [(ngModel)] = "passWord" >
+                </mat-form-field>
+                <button mat-raised-button color="primary" (click)="onLogin()" >login</button>
+                <button mat-raised-button color="primary" (click)="onRegister()" data-toggle="modal" data-target="#example2Modal" data-dismiss="modal" >
+                   
+                    
+                    register</button>
+                <!-- <button type="button"  data-dismiss="modal">
+                    click to close
+                                          </button> -->
+                                    
+            
+            </mat-card>
+            
+
+            
+        </div>
+        <div class="modal-footer">
+            
+            <p *ngIf = "!loginCheckPass" class="errorMassage">!your password should be at least 8charectors and contains both number and charectors</p>
+              <p *ngIf = "!loginCheckPhoneNumber" class="errorMassage">!your number should be made of digits</p>
+            <p *ngIf = "!loginAuthentication" class="errorMassage">!wrong password or phone number</p>
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="example2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="exampleModalLabel">register or login</h1>
+              <button type="button" class="close closeButton" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+  
+                <mat-card>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>name</mat-label>
+                        <input matInput rows="1"  [(ngModel)] = "name" >
+                
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>area</mat-label>
+                        <input matInput  [(ngModel)] = "area">
+                       
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>address</mat-label>
+                        <textarea matInput  rows="4" [(ngModel)] = "address">
+                        </textarea>
+                
+                    </mat-form-field>
+                
+                
+                    <button mat-raised-button color="primary" (click)="onRegister()" data-toggle="modal"  data-dismiss="modal">complete register</button>
+                    <!-- <button type="button"  data-dismiss="modal">
+click to close
+                      </button>
+                 -->
+                    
+                
+                </mat-card> 
+                
+            </div>
+            <div class="modal-footer">
+                
+              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
