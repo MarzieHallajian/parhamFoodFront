@@ -1,8 +1,9 @@
 :host{
     margin-bottom: 100px;
     display: block;
+    width: 80%;
+    margin: auto;
 }
-
 mat-card{
     display: block;
     width: 80%;
@@ -11,14 +12,3 @@ mat-card{
 mat-form-field{
     display: block;
 }
-
-mat-accordion{
-    display: block;
-    width: 80%;
-    margin: auto;
-}
-
-// mat-panel-description{
-//     display: block;
-//     width: 80%;
-// }
