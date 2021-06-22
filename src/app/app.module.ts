@@ -18,7 +18,12 @@ import { OrderComponent } from './order/order.component';
 import { BasketComponent } from './basket/basket.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FooterComponent } from './footer/footer.component';
+
 import { HttpClientModule } from '@angular/common/http';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     BasketComponent,
     MainpageComponent,
     FooterComponent,
+
   ],
   imports: [
     BrowserModule,

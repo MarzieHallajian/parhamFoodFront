@@ -1,0 +1,22 @@
+<!-- <p>order works!</p> -->
+<div class="container">
+    <div class="row">
+
+    <button type="button" class="btn btn-primary col-xs-offset-2 col-xs-3 col-md-offset-3 col-md-2 " (click) = "onArea()">area</button>
+    <button type="button" class="btn btn-success col-xs-2 col-md-2 " (click) = "onFood()" >food</button>
+    <button type="button" class="btn btn-info col-xs-3 col-md-2" (click) = "onResturant()">resturant</button>
+</div>  
+</div>
+
+  <div class="input-group searc container">
+      <div class="row">
+    <div class="form-outline col-md-offset-3 col-xs-12 col-md-5">
+      <input id="search-input" type="search" id="form1" class="form-control" [(ngModel)] = "searchValue" />
+      
+    </div>
+    <button id="search-button" type="button" class="btn btn-primary col-xs-12 col-md-1" (click) = "onSearch()">
+        <label class="form-label" for="form1">Search</label>
+      <!-- <i class="fas fa-search"></i> -->
+    </button>
+</div>
+  </div>
