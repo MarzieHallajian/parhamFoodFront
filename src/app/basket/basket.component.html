@@ -15,20 +15,22 @@
      <div>final price</div>
      </mat-card> -->
 
-
-     <mat-accordion  >
-        <mat-expansion-panel hideTogglen >    <!-- *ngFor="let dataS of data"   (click) = "checkC()" -->
-          <mat-expansion-panel-header>
-            <mat-panel-title >
-             name of resturant <!-- *ngFor="let dataS of data" -->
-            </mat-panel-title>
-            <mat-panel-description> totall price from this resturant is here$$$$
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <div>food name is here</div>  <!-- *ngFor="let dataS of data" -->
-          <div>food name is here</div>
-          
+<mat-accordion >
+  <mat-expansion-panel hideTogglen (click) = "checkC()" *ngFor="let dataS of data" >    <!-- *ngFor="let dataS of data"   (click) = "checkC()" -->
+    <mat-expansion-panel-header>
+      <mat-panel-title class="col-xs-2 col-md-4">
+         <!-- *ngFor="let dataS of data" -->
+        {{dataS.resturant}} 
+      </mat-panel-title>
+      <mat-panel-description class="col-xs-3 col-md-offset-6 col-md-1">
+         totall price:  ${{dataS.price}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+        <div  class="col-md-4">
+          <div>{{dataS.food}}</div>  <!-- *ngFor="let dataS of data" -->
+          <!-- <div>food name is here</div> -->
+        </div>
           <!-- <p>This food takes aporiximately minutes to deliver</p> -->
-        </mat-expansion-panel>
+  </mat-expansion-panel>
         <!-- <button mat-raised-button color="primary" id="buyButton" >Add to basket</button> -->
-    </mat-accordion> 
+</mat-accordion> 

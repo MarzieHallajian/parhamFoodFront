@@ -8,19 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasketComponent implements OnInit {
 
-  // data : [{ name: "hi", number: [1, 2] }] | [name : "", number[]]];
-  // data : "hello";
+  data = [{ resturant: "akbarjoje", food: [" qorme sabzi "," qeyme "], price : 0},
+          { resturant: "gogolpasta", food: [" pizza "], price : 0},
+          { resturant: "marmarpizza", food: [" lazania ", " pasta "], price : 0},
+          { resturant: "asqarkasif", food: [" havij polo ", " albalo polo "], price : 0}
+          ];
+
+  food: any;
+  
   constructor() { }
 
   ngOnInit(): void {
-
+      
   }
 
   checkC(){
+    this.food = [];
     console.log("this workd");
-    // console.log(this.data[0].number[0]);
-  }
-
+    console.log(this.data.length);
+   
 }
 
 
@@ -35,3 +41,4 @@ export class BasketComponent implements OnInit {
 //   sent_delay?: Number;
 //   finished?: boolean;
 // }
+}
