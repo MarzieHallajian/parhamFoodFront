@@ -60,7 +60,7 @@ export class HttpApiService {
   }
 
   // Get Foods For Manager
-  get_foods_m(res_name: string): any {
+  get_foods_m(res_name: string) {
     return this.http.get(`${baseurl}/managers/food/${res_name}`)
   }
 
@@ -70,7 +70,7 @@ export class HttpApiService {
   }
 
   // Delete Food By Manager
-  delete_food_m(data: any): any{
+  delete_food_m(data: any){
     return this.http.delete(`${baseurl}/managers/delete/food`,data);
   }
 
@@ -135,12 +135,12 @@ export class HttpApiService {
   }
 
   // Delete Order By Customer
-  delete_order_c(data: any): any {
+  delete_order_c(data: any) {
     return this.http.post(`${baseurl}/customers/delete/order`,data)
   }
 
   // Orders History By Customer
-  get_orders_history_c(cust_phone: string): any{
+  get_orders_history_c(cust_phone: string){
     return this.http.get(`${baseurl}/customers/history/${cust_phone}`);
   }
 
