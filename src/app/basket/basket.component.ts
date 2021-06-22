@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpApiService } from '../services/http-api.service';
 @Component({
   selector: 'app-basket',
   templateUrl: './basket.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasketComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpApiService: HttpApiService) { }
 
   ngOnInit(): void {
+    
   }
 
 }

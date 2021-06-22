@@ -1,7 +1,7 @@
 export class Food {
-  name?: String;
-  price?: Number;
-  res_name?: String;
+  name?: string;
+  price?: number;
+  res_name?: string;
   available?: boolean;
-  pre_delay?: Number;
+  pre_delay?: number;
 }
