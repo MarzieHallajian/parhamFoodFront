@@ -10,6 +10,7 @@ export class AppComponent {
   
   isLogin = true;
   title = 'my-app';
+  // id = document.cookie.split
   logINN (){
     this.isLogin = false;
     console.log(this.isLogin);

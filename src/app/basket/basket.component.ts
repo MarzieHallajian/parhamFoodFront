@@ -58,17 +58,21 @@ export class BasketComponent implements OnInit {
     
   }
 
+  food:any ;
+
+
   
 
-  food: any;
-  
-
-  checkC(){
-    this.food = [];
-    console.log("this workd");
-    console.log(this.data.length);
+//   checkC(){
+//     this.food = [];
+//     console.log("this workd");
+//     console.log(this.data.length);
    
-  }
+
+
+
+// }
+
 
 
 // export class Order {

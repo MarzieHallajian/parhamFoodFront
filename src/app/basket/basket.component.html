@@ -1,36 +1,16 @@
-<!-- <mat-tree>
-    <mat-nested-tree-node>
-      parent node
-      <mat-nested-tree-node> -- child node1 </mat-nested-tree-node>
-      <mat-nested-tree-node> -- child node2 </mat-nested-tree-node>
-    </mat-nested-tree-node>
- </mat-tree> -->
-
- <h1>hi </h1>
- 
- <!-- <mat-card>
-     <div>akbar joojje</div>
-     <mat-card-header> Simple card</mat-card-header>
-     <div>final price</div>
-     <div>final price</div>
-     </mat-card> -->
-
 <mat-accordion >
-  <mat-expansion-panel hideTogglen (click) = "checkC()" *ngFor="let dataS of data" >    <!-- *ngFor="let dataS of data"   (click) = "checkC()" -->
+  <mat-expansion-panel hideTogglen  *ngFor="let dataS of data" >    <!-- *ngFor="let dataS of data"   (click) = "checkC()" -->
     <mat-expansion-panel-header>
-      <mat-panel-title class="col-xs-2 col-md-4">
-         <!-- *ngFor="let dataS of data" -->
+      <mat-panel-title class="col-xs-1 col-md-4">
+         
         {{dataS.resturant}} 
       </mat-panel-title>
-      <mat-panel-description class="col-xs-3 col-md-offset-6 col-md-1">
+      <mat-panel-description class=" col-xs-2  col-md-offset-4 col-md-1">
          totall price:  ${{dataS.price}}
       </mat-panel-description>
     </mat-expansion-panel-header>
         <div  class="col-md-4">
-          <div>{{dataS.food}}</div>  <!-- *ngFor="let dataS of data" -->
-          <!-- <div>food name is here</div> -->
+          <div>{{dataS.food}}</div>  
         </div>
-          <!-- <p>This food takes aporiximately minutes to deliver</p> -->
   </mat-expansion-panel>
-        <!-- <button mat-raised-button color="primary" id="buyButton" >Add to basket</button> -->
 </mat-accordion> 

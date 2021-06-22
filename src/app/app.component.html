@@ -4,34 +4,22 @@
     <app-post-create></app-post-create> 
     <!-- ya esme taraf ya inke login/register -->
     
-</main> 
+  </main> 
 
 <!-- moshakhas miknim agar login bood chi neshon bde agar nbod chi neshon bde -->
 
   <nav class="navbar navbar-inverse " >
     <div class="container-fluid ">
-      <div class="navbar-header ">
-        <!-- <a routerLink="register" class="nav-link">register</a> -->
-        <div class="navbar-brand">Marzie</div>
+      <div class="col-xs-4 col-sm-2 col-md-1 navbar-header ">
+        <div class=" navbar-brand">Welcome</div>
       </div>
       <ul class="nav navbar-nav">
-        <!-- <li class="active"><a href="#">Home</a></li> -->
-        <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">profile <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Page 1-1</a></li>
-            <li><a href="#">Page 1-2</a></li>
-            <li><a href="#">Page 1-3</a></li>
-          </ul>
-        </li> -->
-        <li><a  routerLink="profile">profile</a></li>
-        <li><a routerLink="basket">basket</a></li>
-        <li><a routerLink="order">order</a></li>
+        <li class="col-xs-2 col-sm-3 col-md-offset-1 col-md-2"><a  routerLink="profile">profile</a></li>
+        <li class="col-xs-2 col-sm-3 col-md-offset-2 col-md-2"><a routerLink="basket">basket</a></li>
+        <li class="col-xs-2 col-sm-3 col-md-offset-2 col-md-2"><a routerLink="order">order</a></li>
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
-
-        <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span><app-post-create></app-post-create> </a></li> -->
-        <!-- <li><span class="glyphicon glyphicon-log-in"></span> <app-post-create></app-post-create></li> -->
       </ul>
     </div>
   </nav>
@@ -39,12 +27,6 @@
 
  
   
-
-<!-- [posts] = "storedPosts" -->
-<!-- (postCreated)= "onPostAdde($event)" -->
-
-
-  <!-- <app-alert></app-alert> -->
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 mt-2">
@@ -53,8 +35,5 @@
     </div>
   </div>
 
-
-  <!-- component footer bayad doros she -->
-  <!-- <h1 *ngIf ="true">ngifff truee</h1> -->
 
 <app-footer></app-footer>
