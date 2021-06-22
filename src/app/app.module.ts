@@ -13,6 +13,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { OrderComponent } from './order/order.component';
+import { BasketComponent } from './basket/basket.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
@@ -22,6 +27,11 @@ import { HttpClientModule } from '@angular/common/http';
     PostCreateComponent,
     HeaderComponent,
     PostListComponent,
+    ProfileComponent,
+    OrderComponent,
+    BasketComponent,
+    MainpageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
