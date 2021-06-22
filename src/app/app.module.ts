@@ -18,6 +18,8 @@ import { OrderComponent } from './order/order.component';
 import { BasketComponent } from './basket/basket.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FooterComponent } from './footer/footer.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import { FooterComponent } from './footer/footer.component';
     BasketComponent,
     MainpageComponent,
     FooterComponent,
+    
 
   ],
   imports: [
@@ -43,7 +46,9 @@ import { FooterComponent } from './footer/footer.component';
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatExpansionModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

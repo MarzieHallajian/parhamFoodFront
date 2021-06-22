@@ -13,10 +13,10 @@ export class ProfileComponent implements OnInit {
   passWord = "1378hello";
 
 
-
   constructor() { }
 
   ngOnInit(): void { //fk knm inja byd ettelate qablisho bgirim
+    
   }
   onCancle(nameInput: HTMLInputElement, phoneNumberInput: HTMLInputElement, passWordInput: HTMLInputElement,
     addressInput: HTMLTextAreaElement,areaInput: HTMLInputElement){
@@ -26,15 +26,20 @@ export class ProfileComponent implements OnInit {
       addressInput.value = this.address;
       areaInput.value = this.area;
   }
+  
   onChange(nameInput: HTMLInputElement, phoneNumberInput: HTMLInputElement, passWordInput: HTMLInputElement,
           addressInput: HTMLTextAreaElement,areaInput: HTMLInputElement){
-
+    
     this.name = nameInput.value;
     this.phoneNumber = phoneNumberInput.value;
     this.passWord = passWordInput.value;
     this.address = addressInput.value;
     this.area = areaInput.value;
     console.log(this.area);
+    
+
+
+    
   }
 
 }

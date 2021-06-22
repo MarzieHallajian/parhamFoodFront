@@ -14,9 +14,45 @@
       <input id="search-input" type="search" id="form1" class="form-control" [(ngModel)] = "searchValue" />
       
     </div>
-    <button id="search-button" type="button" class="btn btn-primary col-xs-12 col-md-1" (click) = "onSearch()">
+    <button id="search-button" type="button" class="btn btn-primary col-xs-12 col-md-1" (click) = "onSearch()" >
         <label class="form-label" for="form1">Search</label>
       <!-- <i class="fas fa-search"></i> -->
     </button>
 </div>
   </div>
+
+
+
+ <mat-accordion  *ngIf = "isData">
+    <mat-expansion-panel hideTogglen *ngFor="let post of posts">
+      <mat-expansion-panel-header>
+        <mat-panel-title >
+          {{post.resturant}}
+        </mat-panel-title>
+        <mat-panel-description> food:{{post.food}}    price:{{post.price}}$ number:{{post.number}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>This food takes aporiximately {{post.time}} minutes to deliver</p>
+      <mat-form-field class="example-user-input">
+        <mat-label>number</mat-label>
+        <input matInput type="number" min="0" [(ngModel)] = "post.number">
+      </mat-form-field> 
+    </mat-expansion-panel>
+    <button mat-raised-button color="primary" id="buyButton" (click) = "buyDone()">Add to basket</button>
+</mat-accordion> 
+
+<div class="alert alert-warning  col-md-offset-4 col-md-4" role="alert" *ngIf = "(!isData && isSearch) ">
+    No data has found.
+</div>
+
+
+<div class="alert alert-success  col-md-offset-4 col-md-4" role="alert" *ngIf = "(doneBuy && allowBuy)">
+    your food added to your basket
+</div>
+
+<div class="alert alert-danger  col-md-offset-4 col-md-4" role="alert" *ngIf = "(!allowBuy && doneBuy)">
+    You should choose at least 1 food
+</div>
+
+
+  

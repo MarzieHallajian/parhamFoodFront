@@ -2,18 +2,31 @@
 //     // margin: auto;
 //     background-color: blanchedalmond;
 // }
-.col-md-4{
-    background-color: cadetblue;
-    border-color: black;
-    border-style: dotted;
-}
+// .col-md-4{
+//     background-color: cadetblue;
+//     border-color: black;
+//     border-style: dotted;
+// }
 
 // .searc > div {
 //     background-color: blanchedalmond;
    
 
 // }
+:host{
+    margin-bottom: 100px;
+    display: block;
+}
 .searc{
     margin-top: 10px;
-    
+    margin-bottom: 5px;
 }
+mat-accordion{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+#buyButton{
+    margin-top: 1rem;
+}
+
