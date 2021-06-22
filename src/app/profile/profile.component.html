@@ -1,90 +1,42 @@
+<form class="example-form">
+    <mat-card>
 
-
-    <form class="example-form">
-        <mat-card>
         <mat-form-field class="example-full-width">
-          <mat-label>Name</mat-label>
-          <input matInput placeholder="Ex. Pizza"  rows="1" [value] = "name" #nameInput>
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="akbar" rows="1" [value]="name" #nameInput>
         </mat-form-field>
-      
+
         <mat-form-field class="example-full-width">
-          <mat-label>phoneNumber</mat-label>
-          <input matInput placeholder="Ex. It makes me feel..." [value]="phoneNumber" #phoneNumberInput >
+            <mat-label>phoneNumber</mat-label>
+            <input matInput placeholder="09128382312" [value]="phoneNumber" #phoneNumberInput>
         </mat-form-field>
 
 
         <mat-form-field class="example-full-width">
             <mat-label>passWord</mat-label>
-            <input matInput placeholder="Ex. It makes me feel..."  [value] = "passWord" #passWordInput >
+            <input matInput placeholder="8char(num and alphabet)" [value]="passWord" #passWordInput>
         </mat-form-field>
 
-        
+
         <mat-form-field class="example-full-width">
             <mat-label>address</mat-label>
-            <textarea matInput placeholder="Ex. It makes me feel..."   rows="4"  [value] = "address" #addressInput ></textarea>
+            <textarea matInput placeholder="tehran, Sanaat squere, ..." rows="4" [value]="address"
+                #addressInput></textarea>
         </mat-form-field>
 
 
         <mat-form-field class="example-full-width">
             <mat-label>area</mat-label>
-            <input matInput placeholder="Ex. It makes me feel..."  [value] = "area"  #areaInput >
+            <input matInput placeholder="1 or 2 or .." [value]="area" #areaInput>
         </mat-form-field>
 
-        <button mat-raised-button color="primary" (click) = "onChange(nameInput, phoneNumberInput, passWordInput,
-                                                            addressInput, areaInput)">Change</button>
-        <button mat-raised-button color="warn" (click) = "onCancle(nameInput, phoneNumberInput, passWordInput,
+        <button mat-raised-button color="primary" (click)="onChange(nameInput, phoneNumberInput, passWordInput,
+                                                            addressInput, areaInput)">
+            Change
+        </button>
+        <button mat-raised-button color="warn" (click)="onCancle(nameInput, phoneNumberInput, passWordInput,
                                                             addressInput, areaInput)">
             Cancle
         </button>
     </mat-card>
-      </form>
-      
-
-
-
-      <!-- <p>profile works!!!!</p>
-
-  <button type="button" class="btn btn-primary regLogButton bg-primary" data-toggle="modal" data-target="#exampleModal">
-        edit profile
-    </button> -->
-
-  
-
-    <!-- <form class="example-form">
-        <mat-card>
-        <mat-form-field class="example-full-width">
-          <mat-label>Name</mat-label>
-          <input matInput placeholder="Ex. Pizza" #nameInput rows="1" >
-        </mat-form-field>
-      
-        <mat-form-field class="example-full-width">
-          <mat-label>phoneNumber</mat-label>
-          <input matInput placeholder="Ex. It makes me feel..." value="Sushi" #phoneNumberInput >
-        </mat-form-field>
-
-
-        <mat-form-field class="example-full-width">
-            <mat-label>passWord</mat-label>
-            <input matInput placeholder="Ex. It makes me feel..." #passWordInput >
-        </mat-form-field>
-
-        
-        <mat-form-field class="example-full-width">
-            <mat-label>address</mat-label>
-            <textarea matInput placeholder="Ex. It makes me feel..."   rows="4" #addressInput >{{address}}</textarea>
-        </mat-form-field>
-
-
-        <mat-form-field class="example-full-width">
-            <mat-label>area</mat-label>
-            <input matInput placeholder="Ex. It makes me feel..."  #areaInput >
-        </mat-form-field>
-
-        <button mat-raised-button color="primary" (click) = "onChange()">Change</button>
-        <button mat-raised-button color="warn" (click) = "onCancle(nameInput, phoneNumberInput, passWordInput,
-                                                addressInput, areaInput)">
-            Cancle
-        </button>
-    </mat-card>
-      </form> -->
-     
+</form>

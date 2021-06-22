@@ -25,6 +25,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-  
+  // id = document.cookie.split(":")[1];
+
 
  }

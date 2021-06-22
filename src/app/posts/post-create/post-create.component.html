@@ -1,5 +1,5 @@
 
-
+<div>
 <div id="logRegButoon" >
     <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal">
         Register/Login
@@ -47,7 +47,7 @@
         <div class="modal-footer">
             
             <p *ngIf = "!loginCheckPass" class="errorMassage">!your password should be at least 8charectors and contains both number and charectors</p>
-              <p *ngIf = "!loginCheckPhoneNumber" class="errorMassage">!your number should be made of digits</p>
+              <p *ngIf = "!loginCheckPhoneNumber" class="errorMassage">!your number should be made of digits and 10char</p>
             <p *ngIf = "!loginAuthentication" class="errorMassage">!wrong password or phone number</p>
           <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button> -->
@@ -106,3 +106,4 @@ click to close
           </div>
         </div>
       </div>
+    </div>
