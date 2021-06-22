@@ -18,6 +18,9 @@ import { OrderComponent } from './order/order.component';
 import { BasketComponent } from './basket/basket.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FooterComponent } from './footer/footer.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -48,7 +51,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
+    MatExpansionModule,
+    ScrollingModule,
     HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

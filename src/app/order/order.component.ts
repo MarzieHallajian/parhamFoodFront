@@ -27,6 +27,7 @@ export class OrderComponent implements OnInit {
     this.isData = false;
   }
   ngOnInit(): void {
+
   }
   
   onResturant(){
@@ -54,6 +55,7 @@ export class OrderComponent implements OnInit {
     }else if(this.foodBool == true){
 
     }else if(this.resturantBool == true){
+      
       this.posts = [{resturant: "akbarJoje", food : "joje", time : "30", price : "20000", number : 0}];
     }else{
           //do nothing!!!!
@@ -65,7 +67,7 @@ export class OrderComponent implements OnInit {
     }
     
   }
-  buyDone(){
+  addToBasket(){
     this.doneBuy = true;
     this.resetAll();
     for (let index = 0; index < this.posts.length; index++) {
@@ -73,12 +75,11 @@ export class OrderComponent implements OnInit {
       if(this.posts[index].number > 0){
         this.allowBuy = true;
         console.log(this.posts[index].number);
-          // bfrst bara backend az in index estefade she
+          // bfrst bara backend az in index estefade she upadate basket
       }
       
     }
     this.isSearch = false;
-
   }
 
 
