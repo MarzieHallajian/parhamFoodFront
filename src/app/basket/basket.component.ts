@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
+import { HttpApiService } from '../services/http-api.service';
+
 // import {}
+
 
 @Component({
   selector: 'app-basket',
@@ -7,6 +11,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basket.component.scss']
 })
 export class BasketComponent implements OnInit {
+
+
+  constructor(private httpApiService: HttpApiService) { }
+
+  ngOnInit(): void {
+  }
 
   data = [{ resturant: "akbarjoje", food: [" qorme sabzi "," qeyme "], price : 0},
           { resturant: "gogolpasta", food: [" pizza "], price : 0},
@@ -16,11 +26,6 @@ export class BasketComponent implements OnInit {
 
   food: any;
   
-  constructor() { }
-
-  ngOnInit(): void {
-      
-  }
 
 //   checkC(){
 //     this.food = [];

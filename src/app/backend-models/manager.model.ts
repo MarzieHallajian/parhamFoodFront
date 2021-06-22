@@ -1,12 +1,12 @@
 export class Manager {
-  id?: String;
-  email?: String;
-  password?: String;
-  name?:String;
-  section?:String;
-  address?: String;
-  service_sections?: Array<String>;
-  working_hours?: String;
-  delay?: Number;
-  fee?: Number;
+  id?: string;
+  email?: string;
+  password?: string;
+  name?:string;
+  section?:string;
+  address?: string;
+  service_sections?: Array<string>;
+  working_hours?: string;
+  delay?: number;
+  fee?: number;
 }

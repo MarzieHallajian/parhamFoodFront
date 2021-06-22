@@ -1,8 +1,9 @@
-import { sharedStylesheetJitUrl } from "@angular/compiler";
+import { sharedStylesheetJitUrl, ThisReceiver } from "@angular/compiler";
 import { Component, EventEmitter, Output } from "@angular/core";
 import { FormControl } from "@angular/forms";
 import { HttpApiService } from "../../services/http-api.service";
 import { Customer } from "../../backend-models/customer.model";
+
 @Component({
     selector:'app-post-create',
     templateUrl: './post-create.component.html',
@@ -50,12 +51,12 @@ export class PostCreateComponent{
           
             }
           }
-}
+    }
 
 
     onLogin(){
-        console.log(this.passWord);
-        console.log(this.phoneNumber);
+        // console.log(this.passWord);
+        // console.log(this.phoneNumber);
         //bfrstim
         let data={
           "phonenum": this.phoneNumber,
@@ -65,8 +66,9 @@ export class PostCreateComponent{
             .subscribe(
               res => {
                 // successful login
-                this.httpApiService.customer = res;
-                console.log(this.httpApiService.customer);
+                
+                document.cookie = `user_id:${res._id}`;
+                console.log(res);
               },
               error => {
                 // error on server
@@ -75,9 +77,32 @@ export class PostCreateComponent{
             );
     }
     onRegister(){
-        console.log(this.phoneNumber);
-        console.log(this.passWord);
-        console.log(this.httpApiService.customer);
+        // console.log(this.phoneNumber);
+        // console.log(this.passWord);
+        
+        if (this.name != ""){
+          console.log("registering!!");
+          let data = {
+            phonenum: this.phoneNumber,
+	          password: this.passWord,
+	          name: this.name,
+	          section: this.area,
+	          address: this.address,
+	          credit:0
+          }
+          this.httpApiService.register_c(data)
+            .subscribe(
+              res => {
+                // successful login
+                document.cookie = `user_id:${res._id}`;
+                console.log(res);
+              },
+              error => {
+                // error on server
+                console.log(error);
+              }
+            );
+        }
         //check mishe password
         // if (this.passWord.length < 8) {
             

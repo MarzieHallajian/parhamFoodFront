@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import { defaultCipherList } from 'constants';
-
+import { HttpApiService } from '../services/http-api.service';
+import { Food } from '../backend-models/food.model';
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
@@ -18,16 +19,42 @@ export class OrderComponent implements OnInit {
   searchValue = "";
   posts = [{resturant: "", food : "", time : "", price : "", number : 0}];
   
-  constructor() { }
+  constructor(private httpApiService: HttpApiService) { }
   
   resetAll(){
     this.resturantBool = false;
     this.foodBool = false;
     this.areaBool = false;
     this.isData = false;
+    
   }
   ngOnInit(): void {
-
+     this.httpApiService.get_foods_c()
+            .subscribe(
+              res => {
+                let arr = res as Array<Food>;
+                
+                this.posts = [];
+                for (let i = 0;i<arr.length;i++){
+                    let food_server = {
+                      resturant: arr[i].res_name as string,
+                      food : arr[i].name as string,
+                      time : arr[i].pre_delay?.toString() as string, 
+                      price : arr[i].price?.toString() as string, 
+                      number : 0,
+                    }
+                    this.posts.push(food_server);
+                }
+                console.log(this.posts);
+                this.isData = true;
+                //console.log(res);
+              },
+              error => {
+                // error on server
+                console.log(error);
+              }
+            );
+            console.log(this.posts);
   }
   
   onResturant(){
@@ -49,14 +76,90 @@ export class OrderComponent implements OnInit {
     this.posts = [];  
     
     if(this.areaBool == true){
+      this.httpApiService.search_by_section_c(Number(this.searchValue))
+            .subscribe(
+              res => {
+                let arr = res as Array<Food>;
+                
+                this.posts = [];
+                for (let i = 0;i<arr.length;i++){
+                    let food_server = {
+                      resturant: arr[i].res_name as string,
+                      food : arr[i].name as string,
+                      time : arr[i].pre_delay?.toString() as string, 
+                      price : arr[i].price?.toString() as string, 
+                      number : 0,
+                    }
+                    this.posts.push(food_server);
+                }
+                console.log(this.posts);
+                this.isData = true;
+                //console.log(res);
+              },
+              error => {
+                // error on server
+                console.log(error);
+              }
+            );
+            console.log(this.posts);
 
       //az searchValue baraye search estefade mishe
       //should get data from backend and keep it in posts!!!
     }else if(this.foodBool == true){
-
+      this.httpApiService.search_by_food_c(this.searchValue)
+            .subscribe(
+              res => {
+                let arr = res as Array<Food>;
+                
+                this.posts = [];
+                for (let i = 0;i<arr.length;i++){
+                    let food_server = {
+                      resturant: arr[i].res_name as string,
+                      food : arr[i].name as string,
+                      time : arr[i].pre_delay?.toString() as string, 
+                      price : arr[i].price?.toString() as string, 
+                      number : 0,
+                    }
+                    this.posts.push(food_server);
+                }
+                console.log(this.posts);
+                this.isData = true;
+                //console.log(res);
+              },
+              error => {
+                // error on server
+                console.log(error);
+              }
+            );
+            console.log(this.posts);
     }else if(this.resturantBool == true){
-      
-      this.posts = [{resturant: "akbarJoje", food : "joje", time : "30", price : "20000", number : 0}];
+      this.httpApiService.search_by_res_c(this.searchValue)
+            .subscribe(
+              res => {
+                let arr = res as Array<Food>;
+                
+                this.posts = [];
+                for (let i = 0;i<arr.length;i++){
+                    let food_server = {
+                      resturant: arr[i].res_name as string,
+                      food : arr[i].name as string,
+                      time : arr[i].pre_delay?.toString() as string, 
+                      price : arr[i].price?.toString() as string, 
+                      number : 0,
+                    }
+                    this.posts.push(food_server);
+                }
+                console.log(this.posts);
+                this.isData = true;
+                //console.log(res);
+              },
+              error => {
+                // error on server
+                console.log(error);
+              }
+            );
+            console.log(this.posts);
+      // this.posts = [{resturant: "akbarJoje", food : "joje", time : "30", price : "20000", number : 0}];
     }else{
           //do nothing!!!!
     }

@@ -13,14 +13,15 @@ const baseurl = 'http://localhost:5000'
   providedIn: 'root'
 })
 export class HttpApiService {
-  // keeping last id from requests
-  comment: Comment = {};
-  customer: Customer = {};
-  food: Food ={};
-  manager: Manager = {};
-  order: Order = {};
+  
 
   constructor(private http: HttpClient) { }
+
+  // Get Customer
+  get_c(id: string): Observable<Customer> {
+    let data = { "id" : id }
+    return this.http.post(`${baseurl}/customers/profile`,data)
+  }
 
   // Login Customer
   login_c(data: any): Observable<Customer> {
@@ -35,6 +36,12 @@ export class HttpApiService {
   // Update Customer
   update_c(data: any): Observable<Customer> {
     return this.http.post(`${baseurl}/customers/update`,data);
+  }
+
+  // Get Manager
+  get_m(id: string): Observable<Customer> {
+    let data = { "id" : id }
+    return this.http.post(`${baseurl}/managers/profile`,data)
   }
 
   // Login Manager
@@ -78,12 +85,12 @@ export class HttpApiService {
   }
 
   // Get Restaturant Orders For Manager
-  get_orders_m(res_name: String): any {
+  get_orders_m(res_name: String){
     return this.http.get(`${baseurl}/managers/orders/${res_name}`)
   }
 
   // Get Restaturant Comments For Manager
-  get_comments_m(res_name: String): any {
+  get_comments_m(res_name: String) {
     return this.http.get(`${baseurl}/managers/comments/${res_name}`);
   }
 
@@ -93,7 +100,7 @@ export class HttpApiService {
   }
 
   // Get Foods For Customer
-  get_foods_c():any {
+  get_foods_c(){
     return this.http.get(`${baseurl}/customers/food`);
   }
 
@@ -103,18 +110,18 @@ export class HttpApiService {
   }
 
   // Search By Section Customer
-  search_by_section_c(section: Number): any{
+  search_by_section_c(section: Number){
     return this.http.get(`${baseurl}/customers/search/section/${section}`);
   }
 
   // Search By Food Customer
-  search_by_food_c(food: String):any{
+  search_by_food_c(food: String){
     return this.http.get(`${baseurl}/customers/search/food/${food}`);
   }
 
   // Search By Restaturant Customer
-  search_by_res_c(res_name: String):any{
-    return this.http.get(`${baseurl}/search/restaurant/${res_name}`);
+  search_by_res_c(res_name: String){
+    return this.http.get(`${baseurl}/customers/search/restaurant/${res_name}`);
   }
 
   // Add To Old Order Or Create A New Order By Customer

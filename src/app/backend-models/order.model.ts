@@ -1,11 +1,11 @@
 export class Order {
     total?: number;
-    list?: Array<String>;
-    cust_phone?: String;
-    res_name?: String;
+    list?: Array<string>;
+    cust_phone?: string;
+    res_name?: string;
     user_accepted?: boolean;
     manager_accepted?: boolean;
-    pre_delay?: Number;
-    sent_delay?: Number;
+    pre_delay?: number;
+    sent_delay?: number;
     finished?: boolean;
 }
