@@ -8,12 +8,13 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   
-  isLogin = true;
-  title = 'my-app';
-  // id = document.cookie.split
-  logINN (){
-    this.isLogin = false;
-    console.log(this.isLogin);
+
+  loginOrNot = false;
+  loginCheck(){
+    if(document.cookie.split(":")[1] == undefined){
+      this.loginOrNot = false
+    }else{
+      this.loginOrNot = true;
+    }
   }
-  
 }

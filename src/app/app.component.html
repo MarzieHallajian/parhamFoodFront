@@ -9,7 +9,8 @@
 <!-- moshakhas miknim agar login bood chi neshon bde agar nbod chi neshon bde -->
 
   <nav class="navbar navbar-inverse " >
-    <div class="container-fluid ">
+    {{loginCheck()}}
+    <div class="container-fluid " *ngIf = "loginOrNot" >
       <div class="col-xs-4 col-sm-2 col-md-1 navbar-header ">
         <div class=" navbar-brand">Welcome</div>
       </div>
@@ -21,6 +22,9 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
       </ul>
+    </div>
+    <div id="welcome" *ngIf = "!loginOrNot" >
+      Welcome to parham food
     </div>
   </nav>
 
