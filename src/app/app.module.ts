@@ -19,6 +19,10 @@ import { BasketComponent } from './basket/basket.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 
 @NgModule({
   declarations: [
@@ -43,7 +47,8 @@ import { FooterComponent } from './footer/footer.component';
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

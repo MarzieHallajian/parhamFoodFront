@@ -1,7 +1,8 @@
 import { sharedStylesheetJitUrl } from "@angular/compiler";
 import { Component, EventEmitter, Output } from "@angular/core";
 import { FormControl } from "@angular/forms";
-
+import { HttpApiService } from "../../services/http-api.service";
+import { Customer } from "../../backend-models/customer.model";
 @Component({
     selector:'app-post-create',
     templateUrl: './post-create.component.html',
@@ -20,6 +21,8 @@ export class PostCreateComponent{
     // outCheckPass :any;
     outCheckPhoneNumber: any;
   
+    constructor( private httpApiService: HttpApiService ){}
+
     onPress() {
        
       // this.testInputRegExp(this.input,'[~!@#$%^&*([\'\/\`\])-=+,.?":;{}|<>]');
@@ -54,11 +57,27 @@ export class PostCreateComponent{
         console.log(this.passWord);
         console.log(this.phoneNumber);
         //bfrstim
+        let data={
+          "phonenum": this.phoneNumber,
+	        "password": this.passWord
+        }
+        this.httpApiService.login_c(data)
+            .subscribe(
+              res => {
+                // successful login
+                this.httpApiService.customer = res;
+                console.log(this.httpApiService.customer);
+              },
+              error => {
+                // error on server
+                console.log(error);
+              }
+            );
     }
     onRegister(){
         console.log(this.phoneNumber);
         console.log(this.passWord);
-
+        console.log(this.httpApiService.customer);
         //check mishe password
         // if (this.passWord.length < 8) {
             
