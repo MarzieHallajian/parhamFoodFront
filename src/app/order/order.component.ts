@@ -178,7 +178,26 @@ export class OrderComponent implements OnInit {
       if(this.posts[index].number > 0){
         this.allowBuy = true;
         console.log(this.posts[index].number);
-          // bfrst bara backend az in index estefade she upadate basket
+        let id = document.cookie.split(":")[1];
+        this.httpApiService.get_c(id)
+            .subscribe(
+              res => {
+                let cust_phone = res.phonenum as string;
+                let rest_name = this.posts[index].resturant;
+                let food_name = this.posts[index].food;
+                for (let i = 0; i <this.posts[index].number; i++) {
+                  this.httpApiService.add_create_order_c(food_name, cust_phone, rest_name)
+                      .subscribe(
+                          res0 => {
+                            console.log(res0);
+                            },
+                          error => {console.log(error);}
+                      );
+                }
+              },
+              error => {console.log(error);}
+            );
+        
       }
       
     }

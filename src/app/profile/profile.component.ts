@@ -61,7 +61,7 @@ export class ProfileComponent implements OnInit {
     this.passWord = passWordInput.value;
     this.address = addressInput.value;
     this.area = areaInput.value;
-    let id = document.cookie.split("=")[1];
+    let id = document.cookie.split(":")[1];
     let data = {
       "id":id,
 	    "password": this.passWord,

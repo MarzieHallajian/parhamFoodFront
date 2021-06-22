@@ -11,11 +11,7 @@ import { Order } from '../backend-models/order.model';
   styleUrls: ['./basket.component.scss']
 })
 export class BasketComponent implements OnInit {
-  data = [{ resturant: "akbarjoje", food: [" qorme sabzi "," qeyme "], price : 0},
-          { resturant: "gogolpasta", food: [" pizza "], price : 0},
-          { resturant: "marmarpizza", food: [" lazania ", " pasta "], price : 0},
-          { resturant: "asqarkasif", food: [" havij polo ", " albalo polo "], price : 0}
-          ];
+  data = [{ resturant: "", food: [""], price : 0}];
 
   constructor(private httpApiService: HttpApiService) { }
 
