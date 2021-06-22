@@ -1,0 +1,34 @@
+<!-- <mat-tree>
+    <mat-nested-tree-node>
+      parent node
+      <mat-nested-tree-node> -- child node1 </mat-nested-tree-node>
+      <mat-nested-tree-node> -- child node2 </mat-nested-tree-node>
+    </mat-nested-tree-node>
+ </mat-tree> -->
+
+ <h1>hi </h1>
+ 
+ <!-- <mat-card>
+     <div>akbar joojje</div>
+     <mat-card-header> Simple card</mat-card-header>
+     <div>final price</div>
+     <div>final price</div>
+     </mat-card> -->
+
+
+     <mat-accordion  >
+        <mat-expansion-panel hideTogglen >    <!-- *ngFor="let dataS of data"   (click) = "checkC()" -->
+          <mat-expansion-panel-header>
+            <mat-panel-title >
+             name of resturant <!-- *ngFor="let dataS of data" -->
+            </mat-panel-title>
+            <mat-panel-description> totall price from this resturant is here$$$$
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>food name is here</div>  <!-- *ngFor="let dataS of data" -->
+          <div>food name is here</div>
+          
+          <!-- <p>This food takes aporiximately minutes to deliver</p> -->
+        </mat-expansion-panel>
+        <!-- <button mat-raised-button color="primary" id="buyButton" >Add to basket</button> -->
+    </mat-accordion> 

@@ -22,6 +22,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 
 import { HttpClientModule } from '@angular/common/http';
+import {MatTreeModule} from '@angular/material/tree';
 
 
 
@@ -39,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     BasketComponent,
     MainpageComponent,
     FooterComponent,
+
     
 
   ],
@@ -53,7 +55,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatExpansionModule,
     ScrollingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTreeModule
 
   ],
   providers: [],
